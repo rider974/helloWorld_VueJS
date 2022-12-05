@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Hello World en VUe.JS</title>
+</head>
+<body>
+    <div id="app">{{ message.helloWorld }}</div>
+
+<script type="module">
+  
+// import module from the url 
+import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+// create a function with data function and return syntax of JSON 
+  createApp({
+    data() {
+      return {
+        message: {
+            helloWorld: 'Hello World!'
+      }
+    }
+}
+// then mount the components with the id of the html tag "#tag"
+  }).mount('#app')
+</script>
+
+<!--
+<script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+      }
+    }
+  </script>
+  -->
+</body>
+</html>
